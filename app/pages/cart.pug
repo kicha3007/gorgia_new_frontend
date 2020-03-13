@@ -1,0 +1,26 @@
+extend include/template_base
+
+include include/blocks/basket-list
+include include/blocks/enter-promo
+include include/blocks/cart-sum
+include include/blocks/cart-buttons
+
+
+
+block variables
+	- var title = 'Корзина';
+
+block content
+	+basket-list()(class="basket-list_indent_bottom")
+	.cart__enter-promo.container
+		+enter-promo()
+	.cart__cart-sum.container
+		+cart-sum()
+	.cart__cart-buttons
+		+cart-buttons()
+	.cart__note.container.cart__note_indent_bottom
+		.cart__note-text
+			| Нажимая на кнопку «Оформить заказ», вы принимаете условия
+			a(href="#") Публичной оферты
+
+

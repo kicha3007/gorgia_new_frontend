@@ -1,0 +1,43 @@
+mixin basket-list(data)
+	.basket-list&attributes(attributes)
+		.basket-list__container.container
+			.basket-list__wrap
+				each item in [1, 2]
+					.basket-list__item
+						.basket-list__row
+							.basket-list__column.basket-list__column_pos_1
+								.basket-list__img-box
+									img.basket-list__img(src="img/c/basket_1.jpg", alt='')
+							.basket-list__column.basket-list__column_pos_2
+								.basket-list__description
+									.basket-list__title Gourji
+									.basket-list__subtitle
+										| Сумка дорожная "Над Спасской башней"
+										| черная | натуральная кожа
+									.basket-list__desc
+										| Коллекция: Дейнека. Полет
+										br
+										| Материал: кожа телячья
+										br
+										| Размер: 50,0 х 27,0 х 35 (см)
+							.basket-list__column.basket-list__column_pos_3
+								.basket-list__count
+									.basket-list__count-title Количество
+									.basket-list__count-select-wrap
+										select.basket-list__count-select
+											option 1
+											option 2
+											option 3
+											option 4
+											option 5
+							.basket-list__column.basket-list__column_pos_4
+								.basket-list__price
+									.basket-list__price-text Цена, руб
+									.basket-list__price-number 64 000
+
+							.basket-list__column.basket-list__column_pos_5
+								.basket-list__remove
+									.basket-list__remove-img-box
+										img.basket-list__remove-img(src="img/close.svg", alt='')
+									.basket-list__remove-text Удалить
+

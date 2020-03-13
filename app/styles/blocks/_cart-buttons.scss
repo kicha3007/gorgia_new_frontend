@@ -1,0 +1,65 @@
+.cart-buttons {
+  &__wrap {
+    display: flex;
+    justify-content: center;
+    @include tablets {
+       display: block;
+    }
+
+  }
+  &__btn-wrap {
+    @include tablets {
+      margin-left: auto;
+      margin-right: auto;
+
+    }
+    &_pos_1 {
+      max-width: 370px;
+      width: 100%;
+      @include tablets {
+          max-width: 270px;
+      }
+
+    }
+    &_pos_2 {
+      max-width: 300px;
+      width: 100%;
+      @include tablets {
+        max-width: 210px;
+      }
+
+    }
+
+
+  }
+  &__btn-wrap + .cart-buttons__btn-wrap {
+    margin-left: 50px;
+    @include tablets {
+      margin-left: auto;
+
+
+      margin-top: 20px;
+    }
+
+  }
+  &__btn.btn {
+    @include tablets {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      font-size: 18px ;
+    }
+
+  }
+
+  &__btn.btn-grey {
+    @include tablets {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      font-size: 18px ;
+    }
+
+  }
+
+
+
+}

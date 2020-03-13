@@ -1,0 +1,36 @@
+// Общие кнопки
+.btn {
+  display: block;
+  border: none;
+  padding: 19px 23px;
+  user-select: none;
+  outline: none !important;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all .3s ease;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 28px;
+  color: #f9f9f9;
+  background: #947446;
+  width: 100%;
+  text-align: center;
+
+}
+
+.btn-grey {
+  text-align: center;
+  display: block;
+  padding: 16px 23px;
+  user-select: none;
+  outline: none !important;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all .3s ease;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  color: #373737;
+  background: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%), #d7d7d7;
+  border: 1px solid #838383;
+}

@@ -1,0 +1,91 @@
+.cart-sum {
+  @include phones {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__wrap {
+    min-width: 390px;
+    @include phones {
+      margin: 0 auto;
+      min-width: auto;
+    }
+  }
+
+  &__row {
+    display: flex;
+  }
+
+  &__column {
+    position: relative;
+    flex-grow: 1;
+    padding: 0 50px 20px;
+    white-space: nowrap;
+    font-weight: normal;
+    font-size: 18px;
+    color: #000000;
+    @include phones {
+      padding: 0 20px 10px;
+      font-size: 16px;
+    }
+
+    &_mod_strong {
+      font-weight: bold;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 1px;
+      height: 100%;
+      background: #d7d2d2;
+    }
+
+    &_pos_1 {
+      width: 60%;
+      @include phones {
+        width: 50%;
+        padding-left: 0;
+
+      }
+
+      &:before {
+        @include phones {
+          display: none;
+        }
+      }
+    }
+
+    &_pos_2 {
+      width: 40%;
+      padding-right: 0;
+      @include phones {
+        width: 50%;
+      }
+    }
+  }
+
+  &__row:last-child .cart-sum__column {
+    padding-bottom: 0;
+  }
+
+  &__row {
+  }
+
+  &__row {
+  }
+
+  &__row {
+  }
+
+  &__row {
+  }
+
+  &__row {
+  }
+}

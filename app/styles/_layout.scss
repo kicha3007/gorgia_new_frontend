@@ -1,0 +1,88 @@
+body,
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  max-width: 100vw;
+  overflow-x: hidden;
+  min-height: 100%;
+}
+
+body {
+  //overflow: hidden;
+  //overflow-x: hidden;
+  position: relative;
+  line-height: 1.42;
+  //прибивка футера к низу
+  display: flex;
+  flex-direction: column;
+}
+
+.main-wrapper {
+  flex: 1 0 auto;
+  overflow-x: hidden;
+}
+
+.footer {
+  flex: 0 0 auto;
+  overflow: hidden;
+  max-width: 100vw;
+}
+
+.container {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.flex-br {
+  display: block;
+  width: 100vw;
+}
+
+.affix {
+  position: fixed !important;
+  top: 0;
+  z-index: 50 !important;
+}
+
+html.overflow-hidden {
+  overflow: hidden;
+}
+
+html.overflow-hidden body {
+  overflow: hidden;
+}
+
+.overlay {
+  display: none;
+}
+
+.overlay.active {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000;
+  opacity: 0.45;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 55;
+}
+
+.hide {
+  display: none;
+}
+
+.opacity {
+  opacity: 0;
+}
+
+
+
