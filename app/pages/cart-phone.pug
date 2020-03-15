@@ -5,4 +5,19 @@ block variables
 	- var title = 'Главная';
 
 block content
+	.cart-phone.cart-phone_indent
+		.cart-phone__container.container
+			.cart-phone__wrap
+				.cart-phone__title Введите номер телефона
+				.cart-phone__inner-wrap
+					input.cart-phone__input(placeholder="+7(_ _ _) _ _ _-_ _-_ _")
+					button.cart-phone__btn.btn Заказать
+			.cart-phone__note
+				| Нажимая кнопку, пользователь даёт своё согласие на обработку персональных данных и принимает &#32;
+				a(href="#")
+					| условия &#32;
+					br
+					| политики конфиденциальности.
+
+
 
