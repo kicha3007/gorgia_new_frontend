@@ -1,0 +1,121 @@
+extend include/template_base
+
+include include/blocks/cart-card
+
+block variables
+	- var title = 'Главная';
+
+block content
+	h1.main-title.container Личный кабинет
+	.cart-cabinet
+		.cart-cabinet__container.container
+			.cart-cabinet__wrap.js--cart-cabinet-wrap(data-registration-choice-wrap)
+				.cart-cabinet__main-column.cart-cabinet__main-column_pos_1(data-accord-item)
+					.cart-cabinet__item
+						.cart-cabinet__title(data-accord-toggle)
+							.cart-cabinet__title-column.cart-cabinet__title-column_pos_1
+								.cart-cabinet__title-text История заказов
+							.cart-cabinet__title-column.cart-cabinet__title-column_pos_2
+								.cart-cabinet__title-icon
+									img.cart-cabinet__img.cart-cabinet__img_plus(src="img/plus.png", alt='')
+									img.cart-cabinet__img.cart-cabinet__img_minus(src="img/minus.png", alt='')
+
+						.cart-cabinet__inner-wrap(data-accord-content)
+							.cart-cabinet__content
+								.cart-cabinet__content-column.cart-cabinet__content-column_pos_1
+									.cart-cabinet__head
+										.cart-cabinet__head-column
+											span.cart-cabinet__head-text Номер заказа
+										.cart-cabinet__head-column
+											span.cart-cabinet__head-text Дата заказа
+										.cart-cabinet__head-column
+											span.cart-cabinet__head-text Сумма заказа
+										.cart-cabinet__head-column
+											span.cart-cabinet__head-text Статус заказа
+									.cart-cabinet__row
+										.cart-cabinet__column
+											.cart-cabinet__id
+												.cart-cabinet__id-img-box
+													img.cart-cabinet__id-img(src="img/cart-order.svg", alt='')
+												.cart-cabinet__id-text 23333
+										.cart-cabinet__column
+											.cart-cabinet__text 30.10.19
+										.cart-cabinet__column
+											.cart-cabinet__text 10000
+										.cart-cabinet__column
+											.cart-cabinet__text В пути
+									.cart-cabinet__row
+										.cart-cabinet__column
+											.cart-cabinet__id
+												.cart-cabinet__id-img-box
+													img.cart-cabinet__id-img(src="img/cart-order.svg", alt='')
+												.cart-cabinet__id-text 23333
+										.cart-cabinet__column
+											.cart-cabinet__text 30.10.19
+										.cart-cabinet__column
+											.cart-cabinet__text 10000
+										.cart-cabinet__column
+											.cart-cabinet__text Оплачен
+									.cart-cabinet__row
+										.cart-cabinet__column
+											.cart-cabinet__id
+												.cart-cabinet__id-img-box
+													img.cart-cabinet__id-img(src="img/cart-order.svg", alt='')
+												.cart-cabinet__id-text 23333
+										.cart-cabinet__column
+											.cart-cabinet__text 30.10.19
+										.cart-cabinet__column
+											.cart-cabinet__text 10000
+										.cart-cabinet__column
+											.cart-cabinet__text Оплачен
+								.cart-cabinet__content-column.cart-cabinet__content-column_pos_2
+									a.cart-cabinet__btn.btn-grey(href="#") Оплатить онлайн
+							.cart-cabinet__bottom
+								a.cart-cabinet__bottom-btn.btn(href="#") Все заказы
+
+
+				.cart-cabinet__main-column.cart-cabinet__main-column_pos_2(data-accord-item)
+					.cart-cabinet__item
+						.cart-cabinet__title(data-accord-toggle)
+							.cart-cabinet__title-column.cart-cabinet__title-column_pos_1
+								.cart-cabinet__title-text Персональные данные
+							.cart-cabinet__title-column.cart-cabinet__title-column_pos_2
+								.cart-cabinet__title-icon
+									img.cart-cabinet__img.cart-cabinet__img_plus(src="img/plus.png", alt='')
+									img.cart-cabinet__img.cart-cabinet__img_minus(src="img/minus.png", alt='')
+						.cart-cabinet__inner-other-wrap(data-accord-content)
+							.cart-cabinet__other-content
+								.cart-cabinet__other-row
+									.cart-cabinet__other-column.cart-cabinet__other-column_pos_1
+										.cart-cabinet__key Имя и фамилия
+									.cart-cabinet__other-column.cart-cabinet__other-column_pos_2
+										.cart-cabinet__value Иванов Иван
+								.cart-cabinet__other-row
+									.cart-cabinet__other-column.cart-cabinet__other-column_pos_1
+										.cart-cabinet__key Телефон
+									.cart-cabinet__other-column.cart-cabinet__other-column_pos_2
+										.cart-cabinet__value +7(926)111-11-11
+								.cart-cabinet__other-row
+									.cart-cabinet__other-column.cart-cabinet__other-column_pos_1
+										.cart-cabinet__key E-mail
+									.cart-cabinet__other-column.cart-cabinet__other-column_pos_2
+										.cart-cabinet__value ivanov@mail.ru
+								.cart-cabinet__other-row
+									.cart-cabinet__other-column.cart-cabinet__other-column_pos_1
+										.cart-cabinet__key Адрес доставки
+									.cart-cabinet__other-column.cart-cabinet__other-column_pos_2
+										.cart-cabinet__value Москва, Ленинский пр-т д3 кв 11
+								.cart-cabinet__other-row
+									.cart-cabinet__other-column.cart-cabinet__other-column_pos_1
+										.cart-cabinet__key Комментарии
+									.cart-cabinet__other-column.cart-cabinet__other-column_pos_2
+										.cart-cabinet__value Домофон 3030
+							.cart-cabinet__other-bottom
+								a.cart-cabinet__other-btn.btn-grey(href="#") Изменить данные
+								a.cart-cabinet__other-link(href="#") Добавить адрес доставки
+			.cart-cabinet__cart-card
+				+cart-card()
+
+
+
+

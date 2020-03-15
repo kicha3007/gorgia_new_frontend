@@ -3,7 +3,7 @@ mixin basket-list(data)
 		.basket-list__container.container
 			.basket-list__wrap
 				each item in [1, 2]
-					.basket-list__item
+					.basket-list__item(data-basket-list-item)
 						.basket-list__row
 							.basket-list__column.basket-list__column_pos_1
 								.basket-list__img-box
@@ -36,7 +36,7 @@ mixin basket-list(data)
 									.basket-list__price-number 64 000
 
 							.basket-list__column.basket-list__column_pos_5
-								.basket-list__remove
+								.basket-list__remove(data-basket-list-remove)
 									.basket-list__remove-img-box
 										img.basket-list__remove-img(src="img/close.svg", alt='')
 									.basket-list__remove-text Удалить

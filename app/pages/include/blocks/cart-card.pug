@@ -1,0 +1,11 @@
+mixin cart-card(data)
+	.cart-card&attributes(attributes)
+		form.cart-card__form
+			.cart-card__wrap
+				.cart-card__title Карта лояльности
+				input.cart-card__input(placeholder="Номер карты")
+				.cart-card__desc
+					| SMS-код будет выслан на номер телефона,
+					br
+					|	указанный при получении карты
+				a.cart-card__btn.btn(href="#") Подтвердить по SMS

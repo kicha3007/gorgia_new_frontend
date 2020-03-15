@@ -41,6 +41,26 @@ body {
   padding: 0 15px;
 }
 
+.main-title {
+  margin-top: 70px;
+  font-weight: normal;
+  font-size: 33px;
+  color: #000000;
+  margin-bottom: 40px;
+  line-height: 1.1;
+  @include phones {
+    font-size: 28px;
+    margin-top: 50px;
+    margin-bottom: 25px;
+  }
+  &_indent_bottom {
+    margin-bottom: 60px;
+    @include phones {
+      margin-bottom: 25px;
+    }
+  }
+}
+
 .flex-br {
   display: block;
   width: 100vw;

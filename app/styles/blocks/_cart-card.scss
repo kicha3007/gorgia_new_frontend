@@ -1,0 +1,38 @@
+.cart-card {
+  &__form {
+    display: block;
+  }
+
+  &__wrap {
+  }
+
+  &__title {
+    font-weight: normal;
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 15px;
+  }
+
+  &__input {
+    width: 100%;
+    max-width: 170px;
+    padding: 9px 10px;
+    font-weight: normal;
+    font-size: 10px;
+    color: #a7a7a7;
+    margin-bottom: 10px;
+  }
+
+  &__desc {
+    font-weight: normal;
+    font-size: 11px;
+    color: #000000;
+    margin-bottom: 25px;
+  }
+
+  &__btn.btn {
+    font-size: 12px;
+    max-width: 180px;
+    padding: 1px 5px;
+  }
+}

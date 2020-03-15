@@ -28,10 +28,13 @@ function DOMready() {
 
         return {
             start: function (e, showItem, callback) {
+
+
                 e.preventDefault();
                 var $this = $(this),
                     accordItems = $(e.delegateTarget).find("[data-accord-item]"),
                     $thisItem = $this.closest("[data-accord-item]");
+
                 accordItems.not($thisItem).removeClass("active");
                 accordItems.find("[data-accord-toggle]").not($this).siblings("[data-accord-content]").slideUp();
 
@@ -80,6 +83,11 @@ function DOMready() {
         accordeonBase.setListener(".js--order-wrap", true);
     }
 
+    if (globParam.windowWidth() < globParam.getMediaSize().LAPTOP) {
+        accordeonBase.slideUpOnLoad(".js--cart-cabinet-wrap", true);
+        accordeonBase.setListener(".js--cart-cabinet-wrap", false);
+    }
+
     // Активируем блоки регистрации
 
 
@@ -100,6 +108,10 @@ function DOMready() {
         })
 
     }
+
+    $("[data-basket-list-remove]").on("click", function () {
+        $(this).closest("[data-basket-list-item]").remove();
+    });
 
 }
 
