@@ -1,11 +1,12 @@
 .registration-enter {
   &_poition {
-    margin: 0 auto;
-    margin-top: 160px;
     margin-bottom: 180px;
   }
+  &__container {
+    max-width: 395px;
+  }
 
-  max-width: 395px;
+
   width: 100%;
 
   &__wrap {
@@ -26,7 +27,8 @@
   &__top {
     display: flex;
     margin-bottom: 15px;
-    justify-content: center;
+    //justify-content: center;
+    padding-left: 18px;
   }
 
   &__input-icon-wrap {
@@ -37,7 +39,7 @@
 
   &__input-main {
     width: 100%;
-    max-width: 160px;
+    max-width: 170px;
     padding: 5px 10px;
     font-weight: normal;
     font-size: 10px;

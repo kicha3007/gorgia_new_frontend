@@ -1,26 +1,27 @@
 mixin registration-enter(data)
 	.registration-enter.registration-enter_poition&attributes(attributes)
-		.registration-enter__wrap
-			.registration-enter__content
-				.registration-enter__title Вход или регистрация
-				.registration-enter__top
-					.registration-enter__input-icon-wrap
-						img.registration-enter__input-icon(src="img/phone.svg", alt='')
-					input.registration-enter__input-main(placeholder="+7(_ _ _) _ _ _-_ _-_ _")
-				a.registration-enter__btn.btn-grey(href="#") Получить код
-				a.registration-enter__link(href="#") Войти по почте
-				.registration-enter__other
-					.registration-enter__other-title или через соцсеть
-					.registration-enter__other-list
-						a.registration-enter__other-item(href="#")
-							img.registration-enter__other-icon(src="img/inst.svg", alt='')
-						a.registration-enter__other-item(href="#")
-							img.registration-enter__other-icon(src="img/fb.svg", alt='')
-						a.registration-enter__other-item(href="#")
-							img.registration-enter__other-icon(src="img/vk.svg", alt='')
-						a.registration-enter__other-item(href="#")
-							img.registration-enter__other-icon(src="img/ok.svg", alt='')
-				.registration-enter__note
-					| Пользователь настоящим действием даёт своё согласие на
-					| обработку персональных данных и принимает
-					a(href="#") условия политики конфиденциальности.
+		.registration-enter__container.container
+			.registration-enter__wrap
+				.registration-enter__content
+					.registration-enter__title Вход или регистрация
+					.registration-enter__top
+						.registration-enter__input-icon-wrap
+							img.registration-enter__input-icon(src="img/phone.svg", alt='')
+						input.registration-enter__input-main(placeholder="+7(_ _ _) _ _ _-_ _-_ _")
+					a.registration-enter__btn.btn-grey(href="#") Получить код
+					a.registration-enter__link(href="#") Войти по почте
+					.registration-enter__other
+						.registration-enter__other-title или через соцсеть
+						.registration-enter__other-list
+							a.registration-enter__other-item(href="#")
+								img.registration-enter__other-icon(src="img/inst.svg", alt='')
+							a.registration-enter__other-item(href="#")
+								img.registration-enter__other-icon(src="img/fb.svg", alt='')
+							a.registration-enter__other-item(href="#")
+								img.registration-enter__other-icon(src="img/vk.svg", alt='')
+							a.registration-enter__other-item(href="#")
+								img.registration-enter__other-icon(src="img/ok.svg", alt='')
+					.registration-enter__note
+						| Пользователь настоящим действием даёт своё согласие на
+						| обработку персональных данных и принимает
+						a(href="#") условия политики конфиденциальности.

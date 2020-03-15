@@ -267,8 +267,12 @@
   &__note {
     margin-top: 25px;
     margin-bottom: 85px;
+    padding-left: 35px;
     @include laptop {
         text-align: center;
+    }
+    @include phones {
+      padding-left: 0;
     }
   }
 

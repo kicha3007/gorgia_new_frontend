@@ -1,12 +1,10 @@
 extend include/template_base
 
-
-include include/blocks/registration-enter
-
+include include/blocks/registration-sms
 
 block variables
 	- var title = 'Главная';
 
 block content
 		h1.main-title.main-title_indent_bottom.container Регистрация
-		+registration-enter()
+		+registration-sms()
