@@ -1,0 +1,83 @@
+.cart-order-sum {
+  border: 1px solid #c4c4c4;
+
+  &__wrap {
+    padding: 20px 25px 15px;
+  }
+
+  &__row {
+    display: flex;
+    margin-bottom: 9px;
+  }
+
+  &__column {
+    position: relative;
+    flex-grow: 1;
+    white-space: nowrap;
+    font-weight: normal;
+    font-size: 16px;
+    color: #000000;
+
+    &_mod_strong {
+      font-weight: bold;
+    }
+
+    &_pos_1 {
+      width: 75%;
+
+      &:before {
+        @include phones {
+          display: none;
+        }
+      }
+    }
+
+    &_pos_2 {
+      width: 25%;
+    }
+  }
+  &__top {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #C4C4C4;
+    margin-bottom: 20px;
+
+  }
+  &__center {
+    margin-bottom: 30px;
+
+  }
+  &__bottom {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  &__btn.btn {
+    max-width: 212px;
+
+    font-weight: bold;
+    font-size: 18px;
+    color: #F9F9F9;
+    padding: 8px 23px;
+
+  }
+  &__note {
+    width: 100%;
+    margin-top: 15px;
+    font-weight: normal;
+    font-size: 9px;
+    text-align: center;
+
+    color: #878787;
+    a {
+      font-weight: normal;
+      font-size: 9px;
+      text-align: center;
+
+      color: #878787;
+      text-decoration: underline;
+
+    }
+
+  }
+
+}

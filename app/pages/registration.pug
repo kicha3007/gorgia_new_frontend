@@ -1,8 +1,21 @@
 extend include/template_base
 
+include include/blocks/registration-sms
+include include/blocks/registration-email
+include include/blocks/registration-enter
+include include/blocks/registration-main
 
 block variables
 	- var title = 'Главная';
 
 block content
+		+registration-enter()
+		+registration-sms()
+		.registration-choice.registration-choice_indent_top
+			.registration-choice__container.container
+				.registration-choice__wrap.js--registration-choice-wrap(data-registration-choice-wrap)
+					.registration-choice__column.registration-choice__column_pos_1.active(data-accord-item data-registration-choice-column="email")
+						+registration-email()
 
+					.registration-choice__column.registration-choice__column_pos_2(data-accord-item data-registration-choice-column="main" class="disabled")
+						+registration-main()

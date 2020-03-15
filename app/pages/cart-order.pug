@@ -1,8 +1,263 @@
 extend include/template_base
 
+include include/blocks/cart-order-sum
+
 
 block variables
 	- var title = 'Главная';
 
 block content
+	.cart-order
+		.cart-order__container.container
+			.cart-order__wrap.js--order-wrap(data-registration-choice-wrap)
+				.cart-order__main-column.cart-order__main-column_pos_1(data-registration-choice-column data-accord-item)
+					.cart-order__item
+						form.cart-order__form
+							.cart-order__top(data-accord-toggle)
+								.cart-order__top-check
+									.cart-order-checkbox
+										.cart-order-checkbox__default.cart-order-checkbox__default_size_big(type="checkbox" name="AGREE" checked)
+										span.cart-order-checkbox__pseudo.cart-order-checkbox__pseudo_size_big
+								.cart-order__title
+									| Самовывоз
+									br
+									span (бесплатно)
+							.cart-order__inner-wrap(data-accord-content)
+								.cart-order__row
+									.cart-order__column.cart-order__column_pos_1
+										.cart-order__text Ваше имя
+									.cart-order__column.cart-order__column_pos_2
+										.cart-order__input-wrap.cart-order__input-wrap_required
+											input.cart-order__input(placeholder="" required)
+								.cart-order__row
+									.cart-order__column.cart-order__column_pos_1
+										.cart-order__text Телефон
+									.cart-order__column.cart-order__column_pos_2
+										.cart-order__input-wrap.cart-order__input-wrap_required
+											input.cart-order__input(placeholder="+7(_ _ _) _ _ _-_ _-_ _" required)
+								.cart-order__row
+									.cart-order__column.cart-order__column_pos_1
+										.cart-order__text E-mail
+									.cart-order__column.cart-order__column_pos_2
+										.cart-order__input-wrap.cart-order__input-wrap_required
+											input.cart-order__input(placeholder="example@example.ru" required)
+
+								.cart-order__row
+									.cart-order__column.cart-order__column_pos_1
+										.cart-order__text
+											| Место
+											br
+											| получения
+									.cart-order__column.cart-order__column_pos_2
+										.cart-order__checkbox-list
+											.cart-order__checkbox-item
+												label.cart-order-checkbox.cart-order-checkbox_inner-pos_top
+													input.cart-order-checkbox__default(type="radio" name="place_1" checked)
+													span.cart-order-checkbox__pseudo
+													span.cart-order-checkbox__text
+														| Торговая Галерея «Модный сезон», ул.Охотный ряд, д.2, 1-й этаж
+														| ст. м. Театральная/Охотный ряд
+											.cart-order__checkbox-item
+												label.cart-order-checkbox.cart-order-checkbox_inner-pos_top
+													input.cart-order-checkbox__default(type="radio" name="place_1" checked)
+													span.cart-order-checkbox__pseudo
+													span.cart-order-checkbox__text
+														| ТДК "Смоленский пассаж", Смоленская площадь, дом 3, 1-й этаж
+														| ст. м. Смоленская
+											.cart-order__checkbox-item
+												label.cart-order-checkbox.cart-order-checkbox_inner-pos_top
+													input.cart-order-checkbox__default(type="radio" name="place_1" checked)
+													span.cart-order-checkbox__pseudo
+													span.cart-order-checkbox__text
+														| ТЦ "Времена Года", Кутузовский проспект, д. 48 , -1-й этаж
+														| ст. м. Славянский Бульвар
+								.cart-order__row
+									.cart-order__column.cart-order__column_pos_1
+										.cart-order__text
+											| Способ
+											br
+											| оплаты
+									.cart-order__column.cart-order__column_pos_2
+										.cart-order__select-wrap
+											select.cart-order__select
+												option Оплата картой онлайн
+												option Оплата картой онлайн 2
+												option Оплата картой онлайн 3
+												option Оплата картой онлайн 4
+												option Оплата картой онлайн 5
+								.cart-order__row
+									.cart-order__column.cart-order__column_pos_1
+										.cart-order__text
+											| Комментарии
+											br
+											| к заказу
+									.cart-order__column.cart-order__column_pos_2
+										.cart-order__textarea-wrap
+											textarea.cart-order__textarea
+
+
+
+
+
+
+
+				.cart-order__main-column.cart-order__main-column_pos_2.disabled(data-registration-choice-column data-accord-item)
+					.cart-order__item
+						form.cart-order__form
+							.cart-order__top(data-accord-toggle)
+								.cart-order__top-check
+									.cart-order-checkbox
+										.cart-order-checkbox__default.cart-order-checkbox__default_size_big(type="checkbox" name="AGREE" checked)
+										span.cart-order-checkbox__pseudo.cart-order-checkbox__pseudo_size_big
+								.cart-order__title
+									| Доставка по Москве
+							.cart-order__inner-wrap(data-accord-content)
+								.cart-order__row
+									.cart-order__column.cart-order__column_pos_1
+										.cart-order__text Ваше имя
+									.cart-order__column.cart-order__column_pos_2
+										.cart-order__input-wrap.cart-order__input-wrap_required
+											input.cart-order__input(placeholder="" required)
+								.cart-order__row
+									.cart-order__column.cart-order__column_pos_1
+										.cart-order__text Телефон
+									.cart-order__column.cart-order__column_pos_2
+										.cart-order__input-wrap.cart-order__input-wrap_required
+											input.cart-order__input(placeholder="+7(_ _ _) _ _ _-_ _-_ _" required)
+								.cart-order__row
+									.cart-order__column.cart-order__column_pos_1
+										.cart-order__text E-mail
+									.cart-order__column.cart-order__column_pos_2
+										.cart-order__input-wrap.cart-order__input-wrap_required
+											input.cart-order__input(placeholder="example@example.ru" required)
+								.cart-order__row
+									.cart-order__column.cart-order__column_pos_1
+										.cart-order__text
+											| Адрес
+									.cart-order__column.cart-order__column_pos_2
+										.cart-order__input-wrap.cart-order__input-wrap_required
+											textarea.cart-order__textarea.cart-order__textarea_height_min(placeholder="ул. Мытная д1, кв 12" required)
+								.cart-order__row
+									.cart-order__column.cart-order__column_pos_1
+										.cart-order__text
+											| Способ
+											br
+											| доставки
+									.cart-order__column.cart-order__column_pos_2.cart-order__column_width_full
+										.cart-order__select-wrap
+											select.cart-order__select
+												option Курьером до двери (на след. день). Стоимость 250 руб.
+												option Курьером до двери (на след. день). Стоимость 350 руб.
+												option Курьером до двери (на след. день). Стоимость 450 руб.
+
+								.cart-order__row
+									.cart-order__column.cart-order__column_pos_1
+										.cart-order__text
+											| Способ
+											br
+											| оплаты
+									.cart-order__column.cart-order__column_pos_2
+										.cart-order__select-wrap
+											select.cart-order__select
+												option Оплата картой курьеру
+												option Оплата картой онлайн 2
+												option Оплата картой онлайн 3
+												option Оплата картой онлайн 4
+												option Оплата картой онлайн 5
+								.cart-order__row
+									.cart-order__column.cart-order__column_pos_1
+										.cart-order__text
+											| Комментарии
+									.cart-order__column.cart-order__column_pos_2
+										.cart-order__textarea-wrap
+											textarea.cart-order__textarea
+
+
+
+
+
+				.cart-order__main-column.cart-order__main-column_pos_3.disabled(data-registration-choice-column data-accord-item)
+
+					.cart-order__item
+						form.cart-order__form
+							.cart-order__top(data-accord-toggle)
+								.cart-order__top-check
+									.cart-order-checkbox
+										.cart-order-checkbox__default.cart-order-checkbox__default_size_big(type="checkbox" name="AGREE" checked)
+										span.cart-order-checkbox__pseudo.cart-order-checkbox__pseudo_size_big
+								.cart-order__title
+									| Доставка в регионы
+							.cart-order__inner-wrap(data-accord-content)
+								.cart-order__row
+									.cart-order__column.cart-order__column_pos_1
+										.cart-order__text Ваше имя
+									.cart-order__column.cart-order__column_pos_2
+										.cart-order__input-wrap.cart-order__input-wrap_required
+											input.cart-order__input(placeholder="" required)
+								.cart-order__row
+									.cart-order__column.cart-order__column_pos_1
+										.cart-order__text Телефон
+									.cart-order__column.cart-order__column_pos_2
+										.cart-order__input-wrap.cart-order__input-wrap_required
+											input.cart-order__input(placeholder="+7(_ _ _) _ _ _-_ _-_ _" required)
+								.cart-order__row
+									.cart-order__column.cart-order__column_pos_1
+										.cart-order__text E-mail
+									.cart-order__column.cart-order__column_pos_2
+										.cart-order__input-wrap.cart-order__input-wrap_required
+											input.cart-order__input(placeholder="example@example.ru" required)
+								.cart-order__row
+									.cart-order__column.cart-order__column_pos_1
+										.cart-order__text Индекс
+									.cart-order__column.cart-order__column_pos_2
+										.cart-order__input-wrap.cart-order__input-wrap_required
+											input.cart-order__input(placeholder="6 цифр" required)
+
+								.cart-order__row
+									.cart-order__column.cart-order__column_pos_1
+										.cart-order__text
+											| Адрес
+									.cart-order__column.cart-order__column_pos_2
+										.cart-order__input-wrap.cart-order__input-wrap_required
+											textarea.cart-order__textarea.cart-order__textarea_height_min(placeholder="ул. Мытная д1, кв 12" required)
+								.cart-order__row
+									.cart-order__column.cart-order__column_pos_1
+										.cart-order__text
+											| Способ
+											br
+											| доставки
+									.cart-order__column.cart-order__column_pos_2.cart-order__column_width_full
+										.cart-order__select-wrap
+											select.cart-order__select
+												option EMS Почта России (со страховкой). Стоимость 647 руб. Срок до 10 дней
+												option EMS Почта России (со страховкой). Стоимость 647 руб. Срок до 10 дней
+												option Курьером до двери (на след. день). Стоимость 450 руб.
+
+								.cart-order__row
+									.cart-order__column.cart-order__column_pos_1
+										.cart-order__text
+											| Способ
+											br
+											| оплаты
+									.cart-order__column.cart-order__column_pos_2
+										.cart-order__select-wrap
+											select.cart-order__select
+												option Оплата картой курьеру
+												option Оплата картой онлайн 2
+												option Оплата картой онлайн 3
+												option Оплата картой онлайн 4
+												option Оплата картой онлайн 5
+								.cart-order__row
+									.cart-order__column.cart-order__column_pos_1
+										.cart-order__text
+											| Комментарии
+									.cart-order__column.cart-order__column_pos_2
+										.cart-order__textarea-wrap
+											textarea.cart-order__textarea
+			.cart-order__note
+				span.cart-order__note-simbol *
+				span.cart-order__note-text - отмечены поля, обязательные для заполнения
+			.cart-order__cart-order-sum
+				+cart-order-sum()
+
 

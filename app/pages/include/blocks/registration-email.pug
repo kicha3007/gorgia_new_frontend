@@ -1,0 +1,20 @@
+mixin registration-email(data)
+	.registration-email&attributes(attributes)
+		.registration-email__wrap
+			.registration-email__content
+				.registration-email__title(data-accord-toggle ) Вход
+				.registration-main__inner-wrap(data-accord-content)
+					.registration-email__center
+						.registration-email__row
+							.registration-email__column.registration-email__column_pos_1
+								.registration-email__text E-mail
+							.registration-email__column.registration-email__column_pos_2
+								input.registration-email__input(placeholder="example@example.ru")
+						.registration-email__row
+							.registration-email__column.registration-email__column_pos_1
+								.registration-email__text Пароль
+							.registration-email__column.registration-email__column_pos_2
+								input.registration-email__input(type="password" placeholder="")
+
+					a.registration-email__btn.btn(href="#") Войти
+					a.registration-email__link(href="#") Забыли пароль?

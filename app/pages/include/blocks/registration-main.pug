@@ -1,0 +1,39 @@
+mixin registration-main(data)
+	.registration-main&attributes(attributes)
+		.registration-main__wrap
+			.registration-main__content
+				.registration-main__title(data-accord-toggle) Регистрация
+				.registration-main__inner-wrap(data-accord-content)
+					.registration-main__center
+						.registration-main__row
+							.registration-main__column.registration-main__column_pos_1
+								.registration-main__text
+									| Ваше имя
+									| и фамилия
+							.registration-main__column.registration-main__column_pos_2.registration-main__column_size_full
+								input.registration-main__input(type="text" placeholder="")
+						.registration-main__row
+							.registration-main__column.registration-main__column_pos_1
+								.registration-main__text E-mail
+							.registration-main__column.registration-main__column_pos_2
+								input.registration-main__input(placeholder="example@example.ru")
+						.registration-main__row
+							.registration-main__column.registration-main__column_pos_1
+								.registration-main__text Пароль
+							.registration-main__column.registration-main__column_pos_2
+								input.registration-main__input(type="password" placeholder="")
+						.registration-main__row
+							.registration-main__column.registration-main__column_pos_1
+								.registration-main__text
+									|  Повторить
+									| пароль
+							.registration-main__column.registration-main__column_pos_2
+								input.registration-main__input(type="password" placeholder="")
+					.registration-main__checkbox
+						label.checkbox
+							input.checkbox__default(type="checkbox" name="AGREE" checked)
+							span.checkbox__pseudo
+							span.checkbox__text
+								| Я хочу получать новости и умедомления по e-mail
+
+						a.registration-main__btn.btn(href="#") Зарегистрироваться
